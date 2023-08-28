@@ -303,7 +303,7 @@ public class MediaPlugin extends Plugin {
             result.put("filePath", expFile.toString());
             call.resolve(result);
         } catch (RuntimeException e) {
-            call.reject("RuntimeException occurred", e);
+            call.reject(e.getLocalizedMessage(), null, e);
         }
     }
 
